@@ -1,0 +1,10 @@
+{
+  "_nota": "Plantilla. Completar con las especies reales de tu fangame (nombres, tipos, stats). captureRate va de 0 a 1. candyValue es cuánta XP da esta especie como caramelo raro. xpGroup define la curva de XP.",
+  "species": [
+    { "id": "inicial_hierba_1", "name": "Inicial Hierba 1", "types": ["planta"], "captureRate": 0.45, "candyValue": 1.0, "xpGroup": "medium_fast", "baseStats": null },
+    { "id": "inicial_fuego_1",  "name": "Inicial Fuego 1",  "types": ["fuego"],  "captureRate": 0.45, "candyValue": 1.0, "xpGroup": "medium_fast", "baseStats": null },
+    { "id": "inicial_agua_1",   "name": "Inicial Agua 1",   "types": ["agua"],   "captureRate": 0.45, "candyValue": 1.0, "xpGroup": "medium_fast", "baseStats": null },
+    { "id": "salvaje_comun_1",  "name": "Salvaje Común 1",  "types": ["normal"], "captureRate": 0.80, "candyValue": 0.5, "xpGroup": "medium_fast", "baseStats": null },
+    { "id": "legendario_1",     "name": "Legendario 1",     "types": ["dragon"], "captureRate": 0.01, "candyValue": 4.0, "xpGroup": "slow", "baseStats": null }
+  ]
+}

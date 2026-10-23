@@ -1,0 +1,35 @@
+{
+  "_nota": "Cada naturaleza sube +10% una estadística y baja -10% otra. Las neutras no modifican nada (plus y minus en null).",
+  "natures": [
+    { "id": "hardy",   "name": "Fuerte",   "plus": null,    "minus": null },
+    { "id": "docile",  "name": "Dócil",    "plus": null,    "minus": null },
+    { "id": "serious", "name": "Seria",    "plus": null,    "minus": null },
+    { "id": "bashful", "name": "Tímida",   "plus": null,    "minus": null },
+    { "id": "quirky",  "name": "Rara",     "plus": null,    "minus": null },
+
+    { "id": "lonely",  "name": "Huraña",   "plus": "attack",    "minus": "defense" },
+    { "id": "brave",   "name": "Valiente", "plus": "attack",    "minus": "speed" },
+    { "id": "adamant", "name": "Firme",    "plus": "attack",    "minus": "spAttack" },
+    { "id": "naughty", "name": "Pícara",   "plus": "attack",    "minus": "spDefense" },
+
+    { "id": "bold",    "name": "Osada",    "plus": "defense",   "minus": "attack" },
+    { "id": "relaxed", "name": "Plácida",  "plus": "defense",   "minus": "speed" },
+    { "id": "impish",  "name": "Audaz",    "plus": "defense",   "minus": "spAttack" },
+    { "id": "lax",     "name": "Floja",    "plus": "defense",   "minus": "spDefense" },
+
+    { "id": "timid",   "name": "Miedosa",  "plus": "speed",     "minus": "attack" },
+    { "id": "hasty",   "name": "Activa",   "plus": "speed",     "minus": "defense" },
+    { "id": "jolly",   "name": "Alegre",   "plus": "speed",     "minus": "spAttack" },
+    { "id": "naive",   "name": "Ingenua",  "plus": "speed",     "minus": "spDefense" },
+
+    { "id": "modest",  "name": "Modesta",  "plus": "spAttack",  "minus": "attack" },
+    { "id": "mild",    "name": "Mansa",    "plus": "spAttack",  "minus": "defense" },
+    { "id": "quiet",   "name": "Serena",   "plus": "spAttack",  "minus": "speed" },
+    { "id": "rash",    "name": "Alocada",  "plus": "spAttack",  "minus": "spDefense" },
+
+    { "id": "calm",    "name": "Calma",    "plus": "spDefense", "minus": "attack" },
+    { "id": "gentle",  "name": "Amable",   "plus": "spDefense", "minus": "defense" },
+    { "id": "sassy",   "name": "Grosera",  "plus": "spDefense", "minus": "speed" },
+    { "id": "careful", "name": "Cauta",    "plus": "spDefense", "minus": "spAttack" }
+  ]
+}

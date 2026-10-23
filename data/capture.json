@@ -1,0 +1,16 @@
+{
+  "_nota": "Fórmula: p = base + bonus_medallas + bonus_copias (tope 1). Luego el mini juego modifica p. Si p llega a 1, captura automática.",
+  "medalBonus": 0.02,
+  "copiesForFullCapture": 20,
+  "minigame": {
+    "accuracyMin": 0.75,
+    "accuracyMax": 1.25
+  },
+  "balls": {
+    "poke":  { "multiplier": 1.0 },
+    "great": { "multiplier": 1.5 },
+    "ultra": { "multiplier": 2.0 }
+  },
+  "startingLevel": 1,
+  "shinyChance": 0.000244
+}

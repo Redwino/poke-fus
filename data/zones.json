@@ -1,0 +1,35 @@
+{
+  "_nota": "Niveles salvajes según zona. Drops: probabilidad por batalla. Recompensas: paquetes fijos por logro.",
+  "zones": [
+    {
+      "id": "pradera_inicial",
+      "name": "Pradera Inicial",
+      "wildLevel": { "min": 2, "max": 8 },
+      "wildTeamSize": { "min": 1, "max": 1 },
+      "encounterRate": 0.12,
+      "drops": [
+        { "item": "poke_ball", "chance": 0.05, "amount": 1 },
+        { "item": "pocion", "chance": 0.03, "amount": 1 }
+      ],
+      "rewards": {
+        "onCompleted": [{ "item": "poke_ball", "amount": 5 }],
+        "onDiscovered": [{ "item": "pocion", "amount": 3 }]
+      }
+    },
+    {
+      "id": "bosque_sombrio",
+      "name": "Bosque Sombrío",
+      "wildLevel": { "min": 15, "max": 30 },
+      "wildTeamSize": { "min": 1, "max": 3 },
+      "encounterRate": 0.10,
+      "drops": [
+        { "item": "great_ball", "chance": 0.04, "amount": 1 },
+        { "item": "caramelo_traspaso", "chance": 0.01, "amount": 1 }
+      ],
+      "rewards": {
+        "onCompleted": [{ "item": "great_ball", "amount": 5 }, { "item": "caramelo_traspaso", "amount": 1 }],
+        "onDiscovered": [{ "item": "pocion_grande", "amount": 2 }]
+      }
+    }
+  ]
+}

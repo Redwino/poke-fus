@@ -1,0 +1,14 @@
+{
+  "_nota": "Reglas de forma, alcance y coste de cada movimiento (clave = nombre en inglés de PokeAPI). shape: point | cone | line | area | self. centerOn: target (en el punto elegido) | self (alrededor del lanzador). Valores en casillas. ap = puntos de acción. hitsAllies = daña aliados. healPct / selfDamagePct en % de PS máximos. status.chance va de 0 a 1.",
+  "tackle":        { "shape": "point", "minRange": 1, "maxRange": 1, "ap": 2, "hitsAllies": false },
+  "vine-whip":     { "shape": "cone", "length": 3, "minRange": 1, "maxRange": 1, "ap": 3, "hitsAllies": false },
+  "ember":         { "shape": "point", "minRange": 1, "maxRange": 4, "ap": 2, "hitsAllies": false, "status": { "name": "quemado", "chance": 0.1, "duration": 4 } },
+  "water-gun":     { "shape": "line", "length": 4, "width": 1, "minRange": 1, "maxRange": 1, "ap": 2, "hitsAllies": false },
+  "flamethrower":  { "shape": "cone", "length": 4, "minRange": 1, "maxRange": 1, "ap": 4, "hitsAllies": false, "status": { "name": "quemado", "chance": 0.1, "duration": 4 } },
+  "hydro-pump":    { "shape": "line", "length": 8, "width": 3, "minRange": 1, "maxRange": 1, "ap": 5, "hitsAllies": false },
+  "solar-beam":    { "shape": "line", "length": 12, "width": 3, "minRange": 1, "maxRange": 1, "ap": 6, "hitsAllies": false },
+  "earthquake":    { "shape": "area", "centerOn": "self", "radius": 4, "minRange": 0, "maxRange": 0, "ap": 4, "hitsAllies": true },
+  "self-destruct": { "shape": "area", "centerOn": "self", "radius": 2, "minRange": 0, "maxRange": 0, "ap": 3, "hitsAllies": true, "selfDamagePct": 50 },
+  "synthesis":     { "shape": "self", "minRange": 0, "maxRange": 0, "ap": 3, "hitsAllies": false, "healPct": 50 },
+  "spikes":        { "shape": "area", "centerOn": "target", "radius": 1, "minRange": 1, "maxRange": 4, "ap": 3, "hitsAllies": false, "cooldown": 5, "placesTrap": { "damagePct": 10, "pmLoss": 1, "pmTurns": 2, "durationTurns": 3, "visibleTo": "owner" } }
+}
