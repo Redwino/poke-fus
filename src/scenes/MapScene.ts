@@ -44,6 +44,7 @@ export class MapScene extends Phaser.Scene {
 
   private playerHex: Hex = { q: 0, r: 0 };
   private popupOpen = false;
+  private teamButton!: Phaser.GameObjects.Text;
   private hover: Hex | null = null;
   private target: Hex | null = null; // destino elegido
   private route: Hex[] = []; // casillas intermedias elegidas con Shift + clic
@@ -126,8 +127,23 @@ export class MapScene extends Phaser.Scene {
       this.updatePath();
     });
 
+    // Botón de equipo arriba a la derecha
+    this.teamButton = this.add
+      .text(this.scale.width - 16, 16, "Equipo y hechizos", {
+        fontSize: "16px",
+        color: "#ffffff",
+        backgroundColor: "#2d3748",
+        padding: { x: 10, y: 6 },
+      })
+      .setOrigin(1, 0)
+      .setDepth(40)
+      .setInteractive({ useHandCursor: true })
+      .on("pointerdown", () => this.openTeam());
+    this.input.keyboard?.on("keydown-T", () => this.openTeam());
+
     this.input.on("pointerdown", (p: Phaser.Input.Pointer) => {
       if (this.moving || this.popupOpen) return;
+      if (this.teamButton.getBounds().contains(p.x, p.y)) return; // el botón no mueve al personaje
       const h = screenToHex({ x: p.worldX, y: p.worldY }, this.cfg);
       this.onClick(h, p.event.shiftKey);
     });
@@ -157,7 +173,14 @@ export class MapScene extends Phaser.Scene {
   private startCombat() {
     if (session.groupDefeated) return;
     session.mapPlayerHex = { ...this.playerHex };
-    this.scene.start("PrepScene");
+    this.scene.start("CombatScene");
+  }
+
+  /** Botón "Equipo y hechizos" del mapa (también con la tecla T). */
+  private openTeam() {
+    if (this.moving || this.popupOpen) return;
+    session.mapPlayerHex = { ...this.playerHex };
+    this.scene.start("TeamScene");
   }
 
   /** Ventana emergente de recompensas o aviso. Bloquea los clics del mapa hasta cerrarla. */

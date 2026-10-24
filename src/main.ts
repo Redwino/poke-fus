@@ -1,7 +1,7 @@
 import Phaser from "phaser";
 import { MapScene } from "./scenes/MapScene";
 import { CombatScene } from "./scenes/CombatScene";
-import { PrepScene } from "./scenes/PrepScene";
+import { TeamScene } from "./scenes/TeamScene";
 
 new Phaser.Game({
   type: Phaser.AUTO,
@@ -12,5 +12,5 @@ new Phaser.Game({
     width: "100%",
     height: "100%",
   },
-  scene: [MapScene, PrepScene, CombatScene],
+  scene: [MapScene, TeamScene, CombatScene],
 });
